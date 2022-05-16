@@ -9,6 +9,7 @@
     <title>Borys Baca - Recruitment task</title>
     <link rel="stylesheet" href="dist/main.css">
     <script src="https://kit.fontawesome.com/f6bcf5af27.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -33,20 +34,20 @@
                 <button class="module__button" id="module-btn">Button</button>
             </div>
         </div>
-        <div class="module__modal">
+        <div class="module__modal" id="modal">
             <div class="module__modal-content">
                 <h2 class="module__title">Alert!</h2>
                 <p class="module__text">You have clicked <span class="module__counter" id="modal-counter"></span> to
                     related button. </p>
-                <button class="module__button module__button--modal" id="modal-btn">Reset</button>
-                <i class="fas fa-times module__modal-icon"></i>
+                <button class="module__button module__button--modal" id="modal-reset-btn">Reset</button>
+                <i class="fas fa-times module__modal-icon" id="close-btn"></i>
 
             </div>
 
         </div>
     </div>
 
-
+    <script src="dist/all.js"></script>
 </body>
 
 
