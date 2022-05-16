@@ -69,12 +69,13 @@
         flex-direction: row;
         justify-content: center;
         text-align: left;
-        height: 40vh;
+        height: 36vh;
+        min-height: 300px;
         margin:9.6rem auto;
         padding: 0;
         &__container{
             margin: 0;
-            flex-basis: 35%;
+            flex-basis: 33%;
             flex-grow: 0;
              margin-left: 4rem;
            
@@ -82,11 +83,7 @@
             justify-content: center;
          
         }
-        &__text{
-        
-        
-           
-        }
+      
         &__box{
             flex-grow: 0;
            
@@ -95,7 +92,7 @@
     
         }
         &__image{
-          flex-basis: 35%;
+          flex-basis:33%;
           font-size: 0;
           height: 100%;
           margin-right: 4rem;
