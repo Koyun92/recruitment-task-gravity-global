@@ -1,1 +1,22 @@
-@import "_reset.scss"
+@import "_reset.scss";
+
+
+.module{
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        margin:auto;
+        text-align: center;
+        margin-top: 4rem;
+        
+    &__image{
+        height: auto;
+        min-height: 200px;
+        width: 100%;
+
+       img{
+        width:70%;
+        height: auto;
+       }
+    }
+}
