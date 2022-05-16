@@ -10,14 +10,9 @@
         margin:auto;
         text-align: center;
         padding: 2rem;
-        
-        
     &__image{
-       
        height: 30%;
        width: 100%;
-       
-     
        img{
         object-fit: cover;
         height: 100%;
@@ -45,8 +40,7 @@
        margin-top: 3rem;
 
     }
-    &__button{
-      
+    &__button{ 
         background-color: $primary;
         color: $btn-color;
         font-weight: 700;
@@ -54,14 +48,46 @@
         margin-bottom: 2rem;
         border-radius : 3.2rem;
         border:none;
+        cursor: pointer;
         &:hover{
-            cursor: pointer;
+         
             background-color:$btn-hover-bgc-color;
         }
+        &--modal{
+            margin-top: 2rem;
+        }
+        
 
     }
-
-
+    // modal styles down here 
+    &__modal{
+        position: fixed;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $dark-05;
+        &-content{
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            padding: 4rem;
+            background-color: $modal-content-bgc;
+        }
+        &-icon{
+            position: absolute;
+            right: 2rem;
+            top: 2rem;
+            cursor: pointer;
+        }
+    }
 }
 @media(min-width:992px){
     .module{
@@ -70,6 +96,7 @@
         justify-content: center;
         text-align: left;
         height: 36vh;
+        max-height: 300px;
         min-height: 300px;
         margin:9.6rem auto;
         padding: 0;
@@ -78,24 +105,39 @@
             flex-basis: 33%;
             flex-grow: 0;
              margin-left: 4rem;
-           
-            
             justify-content: center;
          
         }
-      
         &__box{
             flex-grow: 0;
-           
-           
-            
-    
         }
         &__image{
           flex-basis:33%;
           font-size: 0;
           height: 100%;
           margin-right: 4rem;
+        }
+
+        // modal styles down here 
+        &__modal{
+           
+            &-content{
+               
+                
+                align-items: flex-start;
+                justify-content: space-around;
+                width: 50%;
+                max-width:800px;
+                padding: 2rem 9.5rem;
+                background-color: $modal-content-bgc;
+            }
+            &-icon{
+                position: absolute;
+                right:0;
+                top: 0;
+                padding: 2.5rem;
+                cursor: pointer;
+            }
         }
     }
 }
