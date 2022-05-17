@@ -1,5 +1,5 @@
-if (!sessionStorage.counter || (isNaN(sessionStorage.counter))) {
-    sessionStorage.counter = 0;
+if (!localStorage.counter || (isNaN(localStorage.counter))) {
+    localStorage.counter = 0;
 }
 
 const closeBtn = document.querySelector('#close-btn');
@@ -18,21 +18,21 @@ const modalClosing = () => {
 }
 const alert = (counter) => {
     modal.classList.add('active');
-    counter.innerHTML = `${sessionStorage.counter} times`;
+    counter.innerHTML = `${localStorage.counter} times`;
 }
 const clickIncrease = () => {
-    sessionStorage.counter++;
+    localStorage.counter++;
     const modalCounter = document.querySelector('#modal-counter');
 
 
-    if (sessionStorage.counter >= 5) {
-        sessionStorage.counter = 5;
+    if (localStorage.counter >= 5) {
+        localStorage.counter = 5;
         alert(modalCounter);
     }
 
 }
 const resetCounting = () => {
-    sessionStorage.counter = 0;
+    localStorage.counter = 0;
     clicksCounter = 0;
     modalClosing();
     console.log('You can now click again ! Enjoy yourself :)');
