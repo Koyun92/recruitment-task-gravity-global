@@ -1,8 +1,12 @@
+if (!localStorage.counter) {
+    localStorage.counter = 0;
+}
 const closeBtn = document.querySelector('#close-btn');
 const moduleBtn = document.querySelector('#module-btn');
 let clicksCounter = localStorage.counter;
 // in the case there are many of them on the same page
 // const moduleBtns = document.querySelectorAll('.module__button');
+
 const modal = document.querySelector('#modal');
 const resetBtn = document.querySelector('#modal-reset-btn');
 
@@ -16,7 +20,6 @@ const alert = (counter) => {
     counter.innerHTML = `${localStorage.counter} times`;
 }
 const clickIncrease = () => {
-
     clicksCounter++
     localStorage.counter = clicksCounter;
     const modalCounter = document.querySelector('#modal-counter');
