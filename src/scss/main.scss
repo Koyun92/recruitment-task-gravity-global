@@ -2,7 +2,7 @@
 @import "_variables";
 
 
-// main styles down here 
+// module styles down here 
 .module{
         display: flex;
         flex-direction: column;
@@ -160,5 +160,5 @@
 }
 // active modal class 
 .active{
-    display:flex !important;
+    display:flex;
 }
