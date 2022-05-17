@@ -1,9 +1,10 @@
-if (!localStorage.counter) {
+if (!localStorage.counter || (isNaN(localStorage.counter))) {
     localStorage.counter = 0;
 }
+
 const closeBtn = document.querySelector('#close-btn');
 const moduleBtn = document.querySelector('#module-btn');
-let clicksCounter = localStorage.counter;
+
 // in the case there are many of them on the same page
 // const moduleBtns = document.querySelectorAll('.module__button');
 
@@ -20,13 +21,11 @@ const alert = (counter) => {
     counter.innerHTML = `${localStorage.counter} times`;
 }
 const clickIncrease = () => {
-    clicksCounter++
-    localStorage.counter = clicksCounter;
+    localStorage.counter++;
     const modalCounter = document.querySelector('#modal-counter');
 
 
     if (localStorage.counter >= 5) {
-        clicksCounter = 5;
         localStorage.counter = 5;
         alert(modalCounter);
     }
