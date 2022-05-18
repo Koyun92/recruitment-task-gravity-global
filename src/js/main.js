@@ -3,10 +3,12 @@ if (!localStorage.counter || (isNaN(localStorage.counter))) {
 }
 const closeBtn = document.querySelector('#close-btn');
 const moduleBtn = document.querySelector('#module-btn');
-// in the case there are many of them on the same page
-// const moduleBtns = document.querySelectorAll('.module__button');
 const modal = document.querySelector('#modal');
 const resetBtn = document.querySelector('#modal-reset-btn');
+const modalCounter = document.querySelector('#modal-counter');
+// in the case there are many of them on the same page
+// const moduleBtns = document.querySelectorAll('.module__button');
+
 // FUNCTIONS SECTION DOWN HERE 
 const modalClosing = () => {
     modal.classList.remove('active');
@@ -17,17 +19,18 @@ const alert = (counter) => {
 }
 const clickIncrease = () => {
     localStorage.counter++;
-    const modalCounter = document.querySelector('#modal-counter');
-    if (localStorage.counter >= 5) {
-        localStorage.counter = 5;
-        alert(modalCounter);
+    alert(modalCounter)
+    if (localStorage.counter > 5) {
+        resetBtn.classList.add('active-reset');
     }
 }
 const resetCounting = () => {
     localStorage.counter = 0;
-    modalClosing();
-    console.log('You can now click again ! Enjoy yourself :)');
+    resetBtn.classList.remove('active-reset');
+
+    alert(modalCounter)
 }
+
 // LISTENERS DOWN HERE 
 closeBtn.addEventListener('click', modalClosing);
 moduleBtn.addEventListener('click', clickIncrease);

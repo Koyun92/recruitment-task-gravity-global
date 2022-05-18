@@ -58,6 +58,7 @@
 // modal styles down here 
         &--modal{
             margin-top: 2rem;
+            visibility: hidden;
         }
         
 
@@ -161,4 +162,8 @@
 // active modal class 
 .active{
     display:flex;
+}
+.active-reset{
+    visibility:visible;
+    
 }
